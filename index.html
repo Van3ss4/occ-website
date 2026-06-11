@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OG Cycling Crew — Women's Road Cycling</title>
+  <meta name="description" content="OG Cycling Crew (OCC) — ein regionales Frauen-Radteam aus dem Ortenaukreis. Gemeinsam Radrennen fahren in Südbaden und bei den Bundesligarennen in Süddeutschland." />
+
+  <!-- Open Graph (placeholder image — swap for a team photo) -->
+  <meta property="og:title" content="OG Cycling Crew — Women's Road Cycling" />
+  <meta property="og:image" content="assets/img/group-ride.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Inline SVG sprite (Instagram glyph, reused on the gallery tiles) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ig" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.6" cy="6.4" r="1.4" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <a href="#top" class="brand" aria-label="OG Cycling Crew — Startseite">
+        <svg class="brand__logo" viewBox="0 0 200 80" role="img" aria-label="OG Cycling Crew">
+          <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round">
+            <circle cx="42" cy="34" r="26"/>
+            <path d="M 116 13 A 26 26 0 1 0 116 55"/>
+            <path d="M 170 13 A 26 26 0 1 0 170 55"/>
+          </g>
+          <text x="100" y="76" text-anchor="middle" fill="currentColor"
+                font-family="'Space Grotesk',sans-serif" font-size="11"
+                font-weight="700" letter-spacing="3">OG CYCLING CREW</text>
+        </svg>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">Crew</a>
+        <a href="#riders">Riders</a>
+        <a href="#bundesliga">Bundesliga</a>
+        <a href="#events">Kalender</a>
+        <a href="#sponsors">Partner</a>
+        <a href="#contact" class="nav__cta">Mitfahren</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <!-- PLACEHOLDER: replace with a wide, high-res action shot of the crew riding -->
+      <img src="assets/img/group-ride.png" alt="OG Cycling Crew auf einer Ausfahrt in Südbaden" />
+    </div>
+    <div class="wrap hero__inner">
+      <h1>OG <span class="accent">Cycling</span><br />Crew</h1>
+      <p class="hero__sub">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bei uns zählt <em>der Teamgeist</em> —
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--grad">Werde Teil der Crew <span class="arrow">→</span></a>
+        <a href="#about" class="btn btn--ghost" style="color:#fff">Mehr über uns</a>
+      </div>
+    </div>
+    <div class="hero__scroll">Scroll</div>
+  </section>
+
+  <!-- ============ ABOUT / INTRO ============ -->
+  <section class="section intro" id="about">
+    <div class="wrap">
+      <div class="intro__grid">
+        <div class="reveal">
+          <span class="eyebrow">Wer wir sind</span>
+          <h2>Mehr als ein Team — <em>eine Crew.</em></h2>
+          <p class="lead" style="margin-bottom:1.4rem">
+            Gemeinsam Radrennen fahren, das ist unsere Mission. Zusammengeführt hat uns die
+            Leidenschaft für den Radsport und die Suche nach Gleichgesinnten.
+          </p>
+          <p>
+            Im Ortenaukreis (Kfz-Kennzeichen OG) entstand die Idee eines regionalen Frauen-Radteams.
+            Als OG — „Original Gangsta" — setzen wir im Radsport auf Authentizität: Es geht um mehr
+            als nur körperliche Leistung.
+          </p>
+          <p>
+            Gelebter Teamgeist, gegenseitige Unterstützung und die Entwicklung der individuellen
+            Stärken stehen bei uns im Vordergrund. Es sind die kleinen Momente zwischen den
+            Fahrerinnen, die gemeinsame Taktik und der Zusammenhalt, die uns zu einer Einheit machen.
+          </p>
+        </div>
+        <div class="intro__media reveal" data-delay="1">
+          <!-- PLACEHOLDER: portrait-format team photo -->
+          <img src="assets/img/rider-2.jpg" alt="Fahrerin der OG Cycling Crew" />
+          <div class="intro__badge">
+            <b>100%</b>
+            <span>Women on bikes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats reveal">
+        <div class="stat"><b>20+</b><span>Aktive Fahrerinnen</span></div>
+        <div class="stat"><b>2023</b><span>Gegründet im Ortenaukreis</span></div>
+        <div class="stat"><b>1.000+</b><span>km / Saison &amp; Fahrerin</span></div>
+        <div class="stat"><b>∞</b><span>Höhenmeter Schwarzwald</span></div>
+      </div>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:1rem">↑ Platzhalter-Zahlen — bitte anpassen.</p>
+    </div>
+  </section>
+
+  <!-- ============ RIDERS / CREW ============ -->
+  <section class="section section--tint" id="riders">
+    <div class="wrap">
+      <span class="eyebrow">Die Crew</span>
+      <h2 class="section-title reveal">Gesichter der OCC</h2>
+      <p class="lead reveal" style="margin-top:1rem">Zwei Farben – eine Crew. Wir haben eine Renngemeinschaft und ein Bundesligateam:</p>
+
+      <h3 class="crew-group reveal">Renngemeinschaft</h3>
+      <div class="crew-grid">
+        <article class="rider reveal"><img src="assets/img/portraits/Amelie%20Zimmermann%20OCC%20Post.jpg" alt="Amelie Zimmermann" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Elisabeth%20Egerter%20OCC%20Post.jpg" alt="Elisabeth Egerter" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Laura%20Thaller%20OCC%20Post.jpg" alt="Laura Thaller" loading="lazy" /></article>
+        <article class="rider reveal"><img src="assets/img/portraits/Mara%20Keller%20OCC%20Post.jpg" alt="Mara Keller" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Miriam%20Imbery%20OCC%20Post.jpg" alt="Miriam Imbery" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Nina%20Schmidt%20OCC%20Post.jpg" alt="Nina Schmidt" loading="lazy" /></article>
+        <article class="rider reveal"><img src="assets/img/portraits/Sina%20Huber%20OCC%20Post.jpg" alt="Sina Huber" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Valerie%20Moser%20OCC%20Post.jpg" alt="Valerie Moser" loading="lazy" /></article>
+      </div>
+
+      <h3 class="crew-group reveal">Bundesligateam</h3>
+      <div class="crew-grid">
+        <article class="rider reveal"><img src="assets/img/portraits/Amelie%20Wehrmeyer%20OCC%20Post.jpg" alt="Amelie Wehrmeyer" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Annika%20Schelb%20OCC%20Post.jpg" alt="Annika Schelb" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Clara%20Holly%202%20OCC%20Post.jpg" alt="Clara Holly" loading="lazy" /></article>
+        <article class="rider reveal"><img src="assets/img/portraits/Cynthia%20Morguet%20OCC%20Post.jpg" alt="Cynthia Morguet" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Eliane%20Rupp%20OCC%20Post.jpg" alt="Eliane Rupp" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Kaya%20Meier%20OCC%20Post.jpg" alt="Kaya Meier" loading="lazy" /></article>
+        <article class="rider reveal"><img src="assets/img/portraits/Kira%20Stock%20OCC%20Post.jpg" alt="Kira Stock" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Sofia%20Henninger%20OCC%20Post.jpg" alt="Sofia Henninger" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Vanessa%20Wei%C3%9F%20OCC%20Post.jpg" alt="Vanessa Weiß" loading="lazy" /></article>
+      </div>
+
+      <h3 class="crew-group reveal">Sportliche Leitung</h3>
+      <p class="crew-empty reveal">Platzhalter – Fotos &amp; Namen folgen.</p>
+
+      <h3 class="crew-group reveal">Support Crew</h3>
+      <p class="crew-empty reveal">Platzhalter – Fotos &amp; Namen folgen.</p>
+    </div>
+  </section>
+
+  <!-- ============ BUNDESLIGA / CLUB PARTNERSHIP ============ -->
+  <section class="section" id="bundesliga">
+    <div class="wrap">
+      <div class="club__grid">
+        <div class="reveal">
+          <span class="eyebrow">Bundesliga-Team</span>
+          <h2 class="section-title">Gemeinsam stark mit <em style="font-style:normal;color:var(--teal)">RV&nbsp;Stegen</em></h2>
+          <p class="lead" style="margin:1.4rem 0">
+            Für unser Bundesliga-Team haben wir uns mit dem <strong>RV Stegen e.V.</strong> aus dem
+            Dreisamtal zusammengetan. Unter dem Dach des traditionsreichen Radsportvereins gehen wir gemeinsam in
+            <strong style="color:#092e77">blau</strong> in der Frauen-Bundesliga an den Start.
+          </p>
+          <p>
+            <!-- PLACEHOLDER: Details zur Kooperation ergänzen -->
+            Die Partnerschaft verbindet die Crew-DNA der OCC mit Lizenz, Renn-Infrastruktur und der
+            Erfahrung eines etablierten Vereins — vom gemeinsamen Renntraining bis zur Betreuung an
+            der Strecke. So können wir uns voll aufs Racing konzentrieren.
+          </p>
+          <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap">
+            <a href="https://rvstegen.de" target="_blank" rel="noopener" class="btn btn--grad">RV Stegen e.V. <span class="arrow">→</span></a>
+            <a href="#events" class="btn btn--ghost">Zum Renn-Kalender</a>
+          </div>
+        </div>
+
+        <!-- Co-branding lockup. Replace the "RV STEGEN" text with their logo:
+             <img class="club-card__logo" src="assets/img/rv-stegen.svg" alt="RV Stegen e.V."> -->
+        <aside class="club-card reveal" data-delay="1">
+          <div class="club-card__lockup">
+            <svg class="club-card__occ" viewBox="0 0 200 80" role="img" aria-label="OG Cycling Crew">
+              <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round">
+                <circle cx="42" cy="34" r="26"/>
+                <path d="M 116 13 A 26 26 0 1 0 116 55"/>
+                <path d="M 170 13 A 26 26 0 1 0 170 55"/>
+              </g>
+            </svg>
+            <span class="club-card__x" aria-hidden="true">×</span>
+            <span class="club-card__rv">RV<br>STEGEN</span>
+          </div>
+          <p class="club-card__cap">Frauen-Bundesliga · Saison 2026</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS / CALENDAR ============ -->
+  <section class="section section--dark" id="events">
+    <div class="wrap">
+      <span class="eyebrow">Saison-Kalender</span>
+      <h2 class="section-title reveal">Wo du uns triffst</h2>
+      <p class="lead reveal" style="margin-top:1rem">Platzhalter-Termine — ersetze sie durch eure echten Rides, Rennen &amp; Camps.</p>
+
+      <div class="events">
+        <div class="event reveal">
+          <div class="event__date"><b>04. MÄR</b><span>2026</span></div>
+          <div class="event__body"><h3>Saisonauftakt Ride</h3><p>Gemeinsamer Start in die Saison — Treffpunkt Münsterplatz.</p></div>
+          <span class="event__type">Group Ride</span>
+        </div>
+        <div class="event reveal" data-delay="1">
+          <div class="event__date"><b>18. APR</b><span>2026</span></div>
+          <div class="event__body"><h3>Schwarzwald Camp</h3><p>Drei Tage, viele Höhenmeter, eine Crew. Trainingslager im Hochschwarzwald.</p></div>
+          <span class="event__type">Camp</span>
+        </div>
+        <div class="event reveal" data-delay="2">
+          <div class="event__date"><b>23. MAI</b><span>2026</span></div>
+          <div class="event__body"><h3>Bembelcrit</h3><p>Crit-Racing als Team — wir greifen an.</p></div>
+          <span class="event__type">Race</span>
+        </div>
+        <div class="event reveal" data-delay="3">
+          <div class="event__date"><b>JUL</b><span>2026</span></div>
+          <div class="event__body"><h3>Bikepacking: Ortenau → Adria</h3><p>Das große Sommerabenteuer quer über die Alpen.</p></div>
+          <span class="event__type">Adventure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPONSORS ============ -->
+  <section class="section section--tint" id="sponsors">
+    <div class="wrap">
+      <span class="eyebrow">Unsere Partner</span>
+      <h2 class="section-title reveal">They keep us rollin'</h2>
+      <p class="lead reveal" style="margin-top:1rem"> </p>
+
+      <!-- Flip cards: front = logo, back = short description + website link.
+           Logos live in assets/img/partner_logos/. For a logo that has a dark/built-in
+           background (like an app icon), add class "sponsor-logo--icon" to round it. -->
+      <div class="sponsors-grid reveal">
+        <a class="sponsor-card" href="https://gobik.com" target="_blank" rel="noopener" aria-label="GOBIK – Webseite öffnet in neuem Tab">
+          <div class="sponsor-card__inner">
+            <div class="sponsor-card__face sponsor-card__front">
+              <img class="sponsor-logo" src="assets/img/partner_logos/gobik.png" alt="GOBIK" loading="lazy" />
+            </div>
+            <div class="sponsor-card__face sponsor-card__back">
+              <p>Unser Bekleidungspartner — Premium-Radkleidung „made in Spain".</p>
+              <span class="sponsor-card__link">Zur Webseite <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <a class="sponsor-card" href="https://enduco.app" target="_blank" rel="noopener" aria-label="enduco – Webseite öffnet in neuem Tab">
+          <div class="sponsor-card__inner">
+            <div class="sponsor-card__face sponsor-card__front">
+              <img class="sponsor-logo sponsor-logo--icon" src="assets/img/partner_logos/enduco.png" alt="enduco" loading="lazy" />
+            </div>
+            <div class="sponsor-card__face sponsor-card__back">
+              <p>Smarter Trainingscoach aus Deutschland — datenbasierte Trainingspläne fürs Rennrad, direkt aufs Bike-Computer.</p>
+              <span class="sponsor-card__link">Zur Webseite <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <a class="sponsor-card" href="https://www.tillit-bikes.de" target="_blank" rel="noopener" aria-label="TilliT Bikes – Webseite öffnet in neuem Tab">
+          <div class="sponsor-card__inner">
+            <div class="sponsor-card__face sponsor-card__front">
+              <img class="sponsor-logo" src="assets/img/partner_logos/tillit.png" alt="TilliT Bikes" loading="lazy" />
+            </div>
+            <div class="sponsor-card__face sponsor-card__back">
+              <p>Bike-Kompetenzcenter aus der Ortenau — High-End-Bikes, E-Bikes und Werkstatt mit über 20 Jahren Renn-Erfahrung.</p>
+              <span class="sponsor-card__link">Zur Webseite <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <a class="sponsor-card" href="https://www.freiburger-bierle.de" target="_blank" rel="noopener" aria-label="Freiburger Bierle – Webseite öffnet in neuem Tab">
+          <div class="sponsor-card__inner">
+            <div class="sponsor-card__face sponsor-card__front">
+              <img class="sponsor-logo" src="assets/img/partner_logos/freiburger_bierle.png" alt="Freiburger Bierle" loading="lazy" />
+            </div>
+            <div class="sponsor-card__face sponsor-card__back">
+              <p>Regionales Bier aus Freiburg in Bio-Qualität — für das wohlverdiente Bierle nach der Ausfahrt.</p>
+              <span class="sponsor-card__link">Zur Webseite <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <a class="sponsor-card" href="https://www.radliebe-mb.de" target="_blank" rel="noopener" aria-label="Radliebe – Webseite öffnet in neuem Tab">
+          <div class="sponsor-card__inner">
+            <div class="sponsor-card__face sponsor-card__front">
+              <img class="sponsor-logo sponsor-logo--invert" src="assets/img/partner_logos/radliebe.png" alt="Radliebe Meisterbetrieb" loading="lazy" />
+            </div>
+            <div class="sponsor-card__face sponsor-card__back">
+              <p>Meisterbetrieb für Fahrwerks-Service am Bike — Wartung und Tuning von Federgabeln &amp; Dämpfern.</p>
+              <span class="sponsor-card__link">Zur Webseite <span class="arrow">→</span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div style="margin-top:2.5rem" class="reveal">
+        <p>
+          Du möchtest uns unterstützen? 
+          Wir freuen uns über jede Form der Zusammenarbeit — von Ausrüstung oder Verpflegung 
+          bis zur gemeinsamen Eventplanung. Werde als Partner Teil der Crew!        
+        </p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap"></div>
+          <a href="#contact" class="btn btn--primary">Kontakt <span class="arrow">→</span></a>
+          </div> 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <!-- Privacy-friendly "feed": your own image files linking to Instagram.
+       No third-party scripts / cookies → no DSGVO consent banner needed.
+       Replace the images in assets/img/ and point each <a href> at the matching post. -->
+  <section class="section" id="instagram">
+    <div class="wrap">
+      <div class="insta__head reveal">
+        <div>
+          <span class="eyebrow">Social Media</span>
+          <h2 class="section-title">Folg rein!</h2>
+          <p class="lead" style="margin-top:1rem">Live-Updates aus den Rennen, Rennberichte, Trainings-Insights und mehr. Folge uns auf Instagram, um nichts zu verpassen!</p>
+        </div>
+        <a href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" class="btn btn--grad insta__follow">
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+          @og_cyclingcrew
+        </a>
+      </div>
+
+      <div class="insta-grid reveal">
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/group-ride.png" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/rider-1.jpg" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/rider-2.jpg" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/rider-1.jpg" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/group-ride.png" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+          <img src="assets/img/rider-2.jpg" alt="OCC Instagram-Beitrag" loading="lazy" />
+          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <span class="eyebrow">Kontakt</span>
+      <h2 class="section-title reveal">Sag Hallo</h2>
+
+      Du hast Fragen, Anregungen, möchtest als Sponsor oder Fahrerin Teil der Crew werden oder einfach nur mal „Hallo“ sagen? Wir freuen uns von dir zu hören! <br> Wir sind über E-Mail oder Instagram erreichbar:
+
+      <div class="contact-grid">
+        <div class="contact__channels reveal">
+          <a class="channel" href="mailto:team@og-cycling-crew.de">
+            <span class="channel__icon">@</span>
+            <span><b>E-Mail</b><span>team@og-cycling-crew.de</span></span>
+          </a>
+          <a class="channel" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
+            <span class="channel__icon">IG</span>
+            <span><b>Instagram</b><span>@og_cyclingcrew</span></span>
+          </a>
+        </div>
+
+        <!-- NOTE: GitHub Pages can't process forms server-side.
+             This form posts to a placeholder endpoint — connect Formspree / Getform
+             (see README) or simply remove it and rely on the e-mail link above. -->
+        <form class="form reveal" data-delay="1" action="https://formspree.io/f/your-id-here" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Dein Name" required />
+          </div>
+          <div>
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" placeholder="du@example.com" required />
+          </div>
+          <div>
+            <label for="msg">Nachricht</label>
+            <textarea id="msg" name="message" placeholder="Hey Crew, ich würde gerne mitfahren…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Absenden <span class="arrow">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="brand__logo" src="assets/logo.svg" alt="OG Cycling Crew" style="filter:brightness(0) invert(1)" />
+          <p>Regionales Frauen-Radteam aus dem Ortenaukreis. Gemeinsam Rennen fahren, racen und Abenteuer erleben.</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h4>Crew</h4>
+            <ul>
+              <li><a href="#about">Über uns</a></li>
+              <li><a href="#riders">Fahrerinnen</a></li>
+              <li><a href="#do">Was wir machen</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Mitmachen</h4>
+            <ul>
+              <li><a href="#bundesliga">Bundesliga-Team</a></li>
+              <li><a href="#sponsors">Partner</a></li>
+              <li><a href="#events">Kalender</a></li>
+              <li><a href="#contact">Mitfahren</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Folgen</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="mailto:team@og-cycling-crew.de">E-Mail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> OG Cycling Crew · OCC</span>
+        <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> <em style="color:#56646f">(Platzhalter — bitte ergänzen)</em></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
