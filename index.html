@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
 </head>
 <body>
 
@@ -52,7 +52,7 @@
         <a href="#riders">Crew</a>
         <a href="#events">Kalender</a>
         <a href="#sponsors">Partner</a>
-        <a href="#contact" class="nav__cta">Mitfahren</a>
+        <a href="#contact" class="nav__cta">Kontakt <span class="arrow">→</span></a>
       </nav>
 
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
@@ -110,6 +110,44 @@
 
   </section>
 
+  <!-- ============ MOMENTS (overlapping photo/video collage) ============ -->
+  <!-- Placeholder media. To add a short clip: drop an .mp4 in assets/video/ and
+       uncomment the <source> on a video tile (the poster image shows until then). -->
+  <section class="section section--dark" id="moments">
+    <div class="wrap">
+      <span class="eyebrow">Hinter den Kulissen</span>
+      <h2 class="section-title reveal">Crew-Momente</h2>
+      <p class="lead reveal" style="margin-top:1rem">Platzhalter – Schnappschüsse und kurze Clips aus dem Crew-Leben. Ersetzt sie durch eure eigenen Fotos &amp; Videos.</p>
+
+      <div class="collage reveal">
+        <figure class="collage__item collage__item--1">
+          <img src="assets/img/gruppenbild_jubel.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
+        </figure>
+
+        <figure class="collage__item collage__item--2">
+          <video autoplay muted loop playsinline poster="assets/img/rider-1.jpg">
+            <!-- <source src="assets/video/clip-1.mp4" type="video/mp4"> -->
+          </video>
+          <span class="collage__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </figure>
+
+        <figure class="collage__item collage__item--3">
+          <img src="assets/img/group-ride.png" alt="Crew-Moment (Platzhalter)" loading="lazy" />
+        </figure>
+
+        <figure class="collage__item collage__item--4">
+          <video autoplay muted loop playsinline poster="assets/img/rider-2.jpg">
+            <!-- <source src="assets/video/clip-2.mp4" type="video/mp4"> -->
+          </video>
+          <span class="collage__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </figure>
+
+        <figure class="collage__item collage__item--5">
+          <img src="assets/img/gruppenbild_jubel.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
   <!-- ============ RIDERS / CREW ============ -->
   <section class="section section--tint" id="riders">
     <div class="wrap">
