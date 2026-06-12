@@ -313,6 +313,13 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .crew-group--rg { color: var(--rg); }
 .crew-group--rg::before { background: var(--rg); }
 
+/* On the dark riders section keep the headings legible (the default ink/teal/
+   periwinkle tones are too dark on the navy background) */
+.section--dark .crew-group { color: var(--paper); }
+.section--dark .crew-group--rg { color: #6fb39c; }
+.section--dark .crew-group--buli { color: #8ea2e6; }
+.section--dark .crew-subsection { border-top-color: rgba(255,255,255,.14); }
+
 /* ============================================================
    MOMENTS — overlapping photo / video collage
    ============================================================ */
