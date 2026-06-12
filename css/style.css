@@ -442,7 +442,9 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
    INSTAGRAM GALLERY
    ============================================================ */
 .insta__head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem; }
-.insta__head > div { max-width: 60ch; }
+.insta__head > div { flex: 1 1 60%; max-width: 80ch; }
+/* let the intro text fill the head column instead of the default 60ch cap */
+.insta__head .lead { max-width: none; }
 .insta__follow { flex: none; }
 .insta__follow .ig-ic { width: 20px; height: 20px; }
 
@@ -481,13 +483,21 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .ig-more .ig-post--fade { height: 100%; }
 .ig-more__link {
   position: absolute; inset: 0; z-index: 2;
-  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  display: flex; align-items: center; justify-content: center;
+}
+/* Readable chip so the label stands out over the image behind it */
+.ig-more__pill {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .65rem 1.15rem; border-radius: 100px;
+  background: rgba(255,255,255,.92);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px -10px rgba(8,24,42,.55);
   font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: var(--ink);
-  letter-spacing: .01em;
+  letter-spacing: .01em; transition: background .25s, color .25s;
 }
 .ig-more__link .ig-ic { width: 20px; height: 20px; }
 .ig-more__arrow { transition: transform .3s var(--ease); }
-.ig-more__link:hover { color: var(--blue); }
+.ig-more__link:hover .ig-more__pill { background: #fff; color: var(--blue); }
 .ig-more__link:hover .ig-more__arrow { transform: translateX(4px); }
 @media (max-width: 560px) {
   /* Fade is downward here, so anchor the link near the bottom rather than dead-centre. */
