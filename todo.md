@@ -1,3 +1,3 @@
 - Impressum
 - Datenschutz
-- too much vertical jump onhover bei den collage images
+- lieber die schwarzen Portraits verwenden und dafür eine section mit weißem Hintergrund verwenden?
