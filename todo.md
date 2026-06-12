@@ -2,3 +2,8 @@
 - Datenschutz
 - lieber die schwarzen Portraits verwenden und dafür eine section mit weißem Hintergrund verwenden?
 - Bilder runterscalen und zu webp konvertieren damit sie schneller laden
+- alt Texte aktualisieren
+- SEO
+- domain (haben wir)?
+- cloudflare
+- seite crawlen lassen
