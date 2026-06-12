@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=18" />
+  <link rel="stylesheet" href="css/style.css?v=29" />
 </head>
 <body>
 
@@ -67,7 +67,6 @@
       <nav class="nav" id="nav">
         <a href="#about">Über Uns</a>
         <a href="#riders">Crew</a>
-        <a href="#events">Kalender</a>
         <a href="#sponsors">Partner</a>
         <a href="#contact" class="nav__cta">Kontakt <span class="arrow">→</span></a>
       </nav>
@@ -83,13 +82,10 @@
   <section class="hero" id="top">
     <div class="hero__media">
       <!-- PLACEHOLDER: replace with a wide, high-res action shot of the crew riding -->
-      <img src="assets/img/group-ride.png" alt="OG Cycling Crew auf einer Ausfahrt in Südbaden" />
+      <img src="assets/img/collage/collage.png" alt="OG Cycling Crew auf einer Ausfahrt in Südbaden" />
     </div>
     <div class="wrap hero__inner">
       <h1>OG <span class="accent">Cycling</span><br />Crew</h1>
-      <p class="hero__sub" style="color: red;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>— irgendwelche schlauen Ideen was man hier hinschreiben könnte?</em> 
-      </p>
     </div>
     <div class="hero__scroll">Scroll</div>
   </section>
@@ -117,14 +113,12 @@
             Stärken stehen bei uns im Vordergrund. Trotzdem verfolgen wir ambitionierte Ziele, auf die wir zielstrebig hinarbeiten.
           </p>
         </div>
-        <div class="intro__media reveal" data-delay="1" style="position: relative;">
-          <!-- PLACEHOLDER: portrait-format team photo -->
-          <img src="assets/img/map/map_annotated.png" alt="Platzhalter" style="position: absolute; width: 80%; top: 50%; left: 80%; z-index: 0;" />
-          <img src="assets/img/team/gruppenbild_jubel.jpg" alt="Fahrerinnen der OG Cycling Crew" style="position: relative; z-index: 1;" />
-          
-        </div>
+        <div class="intro__media reveal" data-delay="1">
+          <!-- Decorative map peeking out behind the team photo (placeholder) -->
+          <img class="intro__photo" src="assets/img/team/gruppenbild_jubel.jpg" alt="Fahrerinnen der OG Cycling Crew" loading="lazy" style="border-radius: 0px;" />
+          <img class="intro__map" src="assets/img/map/map_annotated.png" alt="" aria-hidden="true" loading="lazy" style="border-radius: 0px;" />
       </div>
-
+    </div>
   </section>
 
   <!-- ============ MOMENTS (overlapping photo/video collage) ============ -->
@@ -166,7 +160,7 @@
       <span class="eyebrow">Portraits</span>
       <h2 class="section-title reveal">Unsere Fahrerinnen!</h2>
       <p class="lead reveal" style="margin-top:1rem">Grün und blau - wir haben eine Renngemeinschaft und ein Bundesligateam:</p>
-
+      <p style="color: red; margin-top:0.5rem;" class="reveal">passen die Bilder? Oder sollen wir lieber die dunklen nehmen?</p>
       <h3 class="crew-group reveal crew-group--rg">Renngemeinschaft</h3>
       <div class="crew-grid">
         <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Elisabeth%20Egerter%20OCC%20Post.jpg" alt="Elisabeth Egerter" loading="lazy" /></article>
@@ -194,12 +188,16 @@
 
       <h2 class="section-title crew-subsection reveal">Off-Bike Team</h2>
       <h3 class="crew-group reveal">Sportliche Leitung</h3>
+      <p style="color: red; margin-top:0.5rem;" class="reveal">Bilder? das von Amelie, Manuel und Sofia? Jarl fehlt</p>
+      
       <div class="crew-grid">
         <article class="rider reveal"><img src="assets/img/placeholder.png" alt="Platzhalter" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/placeholder.png" alt="Platzhalter" loading="lazy" /></article>
       </div>
 
       <h3 class="crew-group reveal">Support Crew</h3>
+      <p style="color: red; margin-top:0.5rem;" class="reveal">drin lassen?</p>
+      
       <div class="crew-grid">
         <article class="rider reveal"><img src="assets/img/placeholder.png" alt="Platzhalter" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/placeholder.png" alt="Platzhalter" loading="lazy" /></article>
@@ -224,45 +222,13 @@
           </p>
         </div>
 
-        <img class="club-photo reveal" data-delay="1" src="assets/img/bundesliga/buli_aligned.jpg" alt="Das OCC-Bundesligateam in Kooperation mit RV Stegen" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EVENTS / CALENDAR ============ -->
-  <section class="section section--dark" id="events">
-    <div class="wrap">
-      <span class="eyebrow">Saison-Kalender</span>
-      <h2 class="section-title reveal">Meet the Team!</h2>
-      <p class="lead reveal" style="margin-top:1rem; color: red;">Platzhalter-Termine (erfunden von Claude) — wollen wir das? muss man halt auch einigermaßen maintainen</p>
-
-      <div class="events">
-        <div class="event reveal">
-          <div class="event__date"><b>04. MÄR</b><span>2026</span></div>
-          <div class="event__body"><h3>Saisonauftakt Ride</h3><p>Gemeinsamer Start in die Saison — Treffpunkt Münsterplatz.</p></div>
-          <span class="event__type">Group Ride</span>
-        </div>
-        <div class="event reveal" data-delay="1">
-          <div class="event__date"><b>18. APR</b><span>2026</span></div>
-          <div class="event__body"><h3>Schwarzwald Camp</h3><p>Drei Tage, viele Höhenmeter, eine Crew. Trainingslager im Hochschwarzwald.</p></div>
-          <span class="event__type">Camp</span>
-        </div>
-        <div class="event reveal" data-delay="2">
-          <div class="event__date"><b>23. MAI</b><span>2026</span></div>
-          <div class="event__body"><h3>Bembelcrit</h3><p>Crit-Racing als Team — wir greifen an.</p></div>
-          <span class="event__type">Race</span>
-        </div>
-        <div class="event reveal" data-delay="3">
-          <div class="event__date"><b>JUL</b><span>2026</span></div>
-          <div class="event__body"><h3>Bikepacking: Ortenau → Adria</h3><p>Das große Sommerabenteuer quer über die Alpen.</p></div>
-          <span class="event__type">Adventure</span>
-        </div>
+        <img class="club-photo reveal" data-delay="1" src="assets/img/bundesliga/buli_aligned.jpg" alt="Das OCC-Bundesligateam in Kooperation mit RV Stegen" loading="lazy" style="border-radius:0px;"/>
       </div>
     </div>
   </section>
 
   <!-- ============ SPONSORS ============ -->
-  <section class="section section--tint" id="sponsors">
+  <section class="section section--dark" id="sponsors">
     <div class="wrap">
       <span class="eyebrow">Unsere Partner</span>
       <h2 class="section-title reveal">They keep us rollin'</h2>
@@ -286,7 +252,7 @@
 
         <a class="sponsor-card" href="https://enduco.app" target="_blank" rel="noopener" aria-label="enduco – Webseite öffnet in neuem Tab">
           <div class="sponsor-card__inner">
-            <div class="sponsor-card__face sponsor-card__front" style="background-color: #000;">
+            <div class="sponsor-card__face sponsor-card__front" style="background-color: #000; border: 1px solid #000;">
               <img class="sponsor-logo sponsor-logo--icon" src="assets/img/partner_logos/enduco.png" alt="enduco" loading="lazy" />
             </div>
             <div class="sponsor-card__face sponsor-card__back">
@@ -339,9 +305,9 @@
           Wir freuen uns über jede Form der Zusammenarbeit — von Ausrüstung oder Verpflegung 
           bis zur gemeinsamen Eventplanung. Werde als Partner Teil der Crew!        
         </p>
-        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap"></div>
-          <a href="#contact" class="btn btn--primary">Kontakt <span class="arrow">→</span></a>
-          </div> 
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap">
+          <a href="#contact" class="btn btn--ghost">Kontakt <span class="arrow">&#8594;</span></a>
+        </div> 
       </div>
     </div>
   </section>
@@ -381,7 +347,7 @@
             <svg class="ig-act"><use href="#ig-comment"/></svg>
             <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
           </div>
-          <p class="ig-post__caption"><b>og_cyclingcrew</b> Saisonstart in den Beinen, Vorfreude im Kopf — wir sind ready! 🚴‍♀️🔥</p>
+          <p class="ig-post__caption"><b>og_cyclingcrew</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. 🚴‍♀️💚</p>
         </article>
 
         <article class="ig-post">
@@ -397,32 +363,39 @@
             <svg class="ig-act"><use href="#ig-comment"/></svg>
             <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
           </div>
-          <p class="ig-post__caption"><b>og_cyclingcrew</b> Teamwork makes the dream work — danke an alle, die heute mitgerollt sind! 💚</p>
+          <p class="ig-post__caption"><b>og_cyclingcrew</b> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
         </article>
 
-        <!-- Rightmost card fades out — hints that there's more on the actual feed. -->
-        <article class="ig-post ig-post--fade">
-          <a class="ig-post__head" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
-            <span class="ig-post__avatar" aria-hidden="true"><svg viewBox="0 0 200 68"><use href="#occ-mark"/></svg></span>
-            <span class="ig-post__handle">og_cyclingcrew</span>
+        <!-- Rightmost card fades out + a "mehr auf Instagram" link sits on top, hinting at more. -->
+        <div class="ig-more">
+          <article class="ig-post ig-post--fade" aria-hidden="true">
+            <div class="ig-post__head">
+              <span class="ig-post__avatar"><svg viewBox="0 0 200 68"><use href="#occ-mark"/></svg></span>
+              <span class="ig-post__handle">og_cyclingcrew</span>
+            </div>
+            <div class="ig-post__media">
+              <img src="assets/img/placeholder.png" alt="" loading="lazy" />
+            </div>
+            <div class="ig-post__actions">
+              <svg class="ig-act"><use href="#ig-heart"/></svg>
+              <svg class="ig-act"><use href="#ig-comment"/></svg>
+              <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
+            </div>
+            <p class="ig-post__caption"><b>og_cyclingcrew</b> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </article>
+          <a class="ig-more__link" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
+            <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
+            Mehr auf Instagram
+            <span class="ig-more__arrow" aria-hidden="true">→</span>
           </a>
-          <a class="ig-post__media" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-            <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          </a>
-          <div class="ig-post__actions" aria-hidden="true">
-            <svg class="ig-act"><use href="#ig-heart"/></svg>
-            <svg class="ig-act"><use href="#ig-comment"/></svg>
-            <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
-          </div>
-          <p class="ig-post__caption"><b>og_cyclingcrew</b> Rennbericht ist online — es ging um jede Sekunde. 🏁 Link in Bio!</p>
-        </article>
+        </div>
 
       </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
+  <section class="section section--tint" id="contact">
     <div class="wrap">
       <span class="eyebrow">Kontakt</span>
       <h2 class="section-title reveal">Sag Hallo!</h2>
@@ -466,8 +439,9 @@
             <h4>Crew</h4>
             <ul>
               <li><a href="#about">Über uns</a></li>
-              <li><a href="#riders">Fahrerinnen</a></li>
-              <li><a href="#do">Was wir machen</a></li>
+              <li><a href="#riders">Crew</a></li>
+              <li><a href="#bundesliga">Bundesliga</a></li>
+              <li><a href="#sponsors">Partner</a></li>
             </ul>
           </div>
 
