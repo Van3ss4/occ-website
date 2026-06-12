@@ -1,0 +1,3 @@
+- Impressum
+- Datenschutz
+- color styling der sections - muss sihc abwechseln

@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/style.css?v=18" />
 </head>
 <body>
 
@@ -28,6 +28,23 @@
       <rect x="2" y="2" width="20" height="20" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/>
       <circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/>
       <circle cx="17.6" cy="6.4" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="ig-heart" viewBox="0 0 24 24">
+      <path d="M12 21s-7.5-4.6-10-9.2C.6 8.9 1.7 5.3 4.9 4.4 7 3.8 9.1 4.7 12 7.6c2.9-2.9 5-3.8 7.1-3.2 3.2.9 4.3 4.5 2.9 7.4C19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ig-comment" viewBox="0 0 24 24">
+      <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ig-share" viewBox="0 0 24 24">
+      <path d="M22 2 11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22 2 15 22l-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="occ-mark" viewBox="0 0 200 68">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round">
+        <circle cx="42" cy="34" r="26"/>
+        <path d="M 116 13 A 26 26 0 1 0 116 55"/>
+        <path d="M 170 13 A 26 26 0 1 0 170 55"/>
+      </g>
     </symbol>
   </svg>
 
@@ -70,8 +87,8 @@
     </div>
     <div class="wrap hero__inner">
       <h1>OG <span class="accent">Cycling</span><br />Crew</h1>
-      <p class="hero__sub">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bei uns zählt <em>der Teamgeist</em> —
+      <p class="hero__sub" style="color: red;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>— irgendwelche schlauen Ideen was man hier hinschreiben könnte?</em> 
       </p>
     </div>
     <div class="hero__scroll">Scroll</div>
@@ -100,10 +117,10 @@
             Stärken stehen bei uns im Vordergrund. Trotzdem verfolgen wir ambitionierte Ziele, auf die wir zielstrebig hinarbeiten.
           </p>
         </div>
-        <div class="intro__media reveal" data-delay="1">
+        <div class="intro__media reveal" data-delay="1" style="position: relative;">
           <!-- PLACEHOLDER: portrait-format team photo -->
-          <img src="assets/img/gruppenbild_jubel.jpg" alt="Fahrerinnen der OG Cycling Crew" />
-          <img src="assets/img/placeholder.png" alt="Platzhalter" />
+          <img src="assets/img/map/map_annotated.png" alt="Platzhalter" style="position: absolute; width: 80%; top: 50%; left: 80%; z-index: 0;" />
+          <img src="assets/img/team/gruppenbild_jubel.jpg" alt="Fahrerinnen der OG Cycling Crew" style="position: relative; z-index: 1;" />
           
         </div>
       </div>
@@ -115,35 +132,30 @@
        uncomment the <source> on a video tile (the poster image shows until then). -->
   <section class="section section--dark" id="moments">
     <div class="wrap">
-      <span class="eyebrow">Hinter den Kulissen</span>
-      <h2 class="section-title reveal">Crew-Momente</h2>
-      <p class="lead reveal" style="margin-top:1rem">Platzhalter – Schnappschüsse und kurze Clips aus dem Crew-Leben. Ersetzt sie durch eure eigenen Fotos &amp; Videos.</p>
+      <p style="color: red;">hier wären noch ein/zwei Videos cool oder ein paar etwas actionreichere Rennbilder - mal bei Fotographen anfragen, ob wir die hier auch verwenden dürfen? oder hier nochmal verlinken?</p>
+        
 
       <div class="collage reveal">
         <figure class="collage__item collage__item--1">
-          <img src="assets/img/gruppenbild_jubel.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
+          <img src="assets/img/team/gruppenbild_jubel.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
         </figure>
 
         <figure class="collage__item collage__item--2">
-          <video autoplay muted loop playsinline poster="assets/img/rider-1.jpg">
+          <video autoplay muted loop playsinline poster="assets/img/group-ride.png">
             <!-- <source src="assets/video/clip-1.mp4" type="video/mp4"> -->
           </video>
           <span class="collage__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </figure>
 
         <figure class="collage__item collage__item--3">
-          <img src="assets/img/group-ride.png" alt="Crew-Moment (Platzhalter)" loading="lazy" />
+          <img src="assets/img/team/RD_bordstein.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
         </figure>
 
         <figure class="collage__item collage__item--4">
-          <video autoplay muted loop playsinline poster="assets/img/rider-2.jpg">
+          <video autoplay muted loop playsinline poster="assets/img/team/KTC_klettergeruest.jpg">
             <!-- <source src="assets/video/clip-2.mp4" type="video/mp4"> -->
           </video>
           <span class="collage__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        </figure>
-
-        <figure class="collage__item collage__item--5">
-          <img src="assets/img/gruppenbild_jubel.jpg" alt="Crew-Moment (Platzhalter)" loading="lazy" />
         </figure>
       </div>
     </div>
@@ -152,35 +164,35 @@
   <section class="section section--tint" id="riders">
     <div class="wrap">
       <span class="eyebrow">Portraits</span>
-      <h2 class="section-title reveal">Unserer Fahrerinnen!</h2>
+      <h2 class="section-title reveal">Unsere Fahrerinnen!</h2>
       <p class="lead reveal" style="margin-top:1rem">Grün und blau - wir haben eine Renngemeinschaft und ein Bundesligateam:</p>
 
       <h3 class="crew-group reveal crew-group--rg">Renngemeinschaft</h3>
       <div class="crew-grid">
-        <article class="rider reveal"><img src="assets/img/portraits/Amelie%20Zimmermann%20OCC%20Post.jpg" alt="Amelie Zimmermann" loading="lazy" /></article>
         <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Elisabeth%20Egerter%20OCC%20Post.jpg" alt="Elisabeth Egerter" loading="lazy" /></article>
         <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Laura%20Thaller%20OCC%20Post.jpg" alt="Laura Thaller" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Valerie%20Moser%20OCC%20Post.jpg" alt="Valerie Moser" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/portraits/Mara%20Keller%20OCC%20Post.jpg" alt="Mara Keller" loading="lazy" /></article>
         <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Miriam%20Imbery%20OCC%20Post.jpg" alt="Miriam Imbery" loading="lazy" /></article>
+        <article class="rider reveal"><img src="assets/img/portraits/Amelie%20Zimmermann%20OCC%20Post.jpg" alt="Amelie Zimmermann" loading="lazy" /></article>
         <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Nina%20Schmidt%20OCC%20Post.jpg" alt="Nina Schmidt" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/portraits/Sina%20Huber%20OCC%20Post.jpg" alt="Sina Huber" loading="lazy" /></article>
-        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Valerie%20Moser%20OCC%20Post.jpg" alt="Valerie Moser" loading="lazy" /></article>
-      </div>
+        </div>
 
       <h3 class="crew-group crew-group--buli reveal">Bundesligateam</h3>
       <div class="crew-grid">
         <article class="rider reveal"><img src="assets/img/portraits/Amelie%20Wehrmeyer%20OCC%20Post.jpg" alt="Amelie Wehrmeyer" loading="lazy" /></article>
-        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Annika%20Schelb%20OCC%20Post.jpg" alt="Annika Schelb" loading="lazy" /></article>
         <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Clara%20Holly%202%20OCC%20Post.jpg" alt="Clara Holly" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/portraits/Cynthia%20Morguet%20OCC%20Post.jpg" alt="Cynthia Morguet" loading="lazy" /></article>
         <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Eliane%20Rupp%20OCC%20Post.jpg" alt="Eliane Rupp" loading="lazy" /></article>
+        <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Annika%20Schelb%20OCC%20Post.jpg" alt="Annika Schelb" loading="lazy" /></article>
         <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Kaya%20Meier%20OCC%20Post.jpg" alt="Kaya Meier" loading="lazy" /></article>
         <article class="rider reveal"><img src="assets/img/portraits/Kira%20Stock%20OCC%20Post.jpg" alt="Kira Stock" loading="lazy" /></article>
         <article class="rider reveal" data-delay="1"><img src="assets/img/portraits/Sofia%20Henninger%20OCC%20Post.jpg" alt="Sofia Henninger" loading="lazy" /></article>
         <article class="rider reveal" data-delay="2"><img src="assets/img/portraits/Vanessa%20Wei%C3%9F%20OCC%20Post.jpg" alt="Vanessa Weiß" loading="lazy" /></article>
       </div>
 
-      <h2 class="section-title reveal">Off-Bike Team</h2>
+      <h2 class="section-title crew-subsection reveal">Off-Bike Team</h2>
       <h3 class="crew-group reveal">Sportliche Leitung</h3>
       <div class="crew-grid">
         <article class="rider reveal"><img src="assets/img/placeholder.png" alt="Platzhalter" loading="lazy" /></article>
@@ -207,6 +219,8 @@
              aus dem
             Dreisamtal zusammengetan. Unter dem Dach des traditionsreichen Radsportvereins gehen wir gemeinsam 
             in der Frauen-Bundesliga an den Start.
+            <br><br>
+            <i style="color: red;">den Abschnitt haben die Equipe Menschen auch - wollen wir das?</i>
           </p>
         </div>
 
@@ -220,7 +234,7 @@
     <div class="wrap">
       <span class="eyebrow">Saison-Kalender</span>
       <h2 class="section-title reveal">Meet the Team!</h2>
-      <p class="lead reveal" style="margin-top:1rem">Platzhalter-Termine (erfunden von Claude) — wollen wir das? muss man auch irgendwie maintainen</p>
+      <p class="lead reveal" style="margin-top:1rem; color: red;">Platzhalter-Termine (erfunden von Claude) — wollen wir das? muss man halt auch einigermaßen maintainen</p>
 
       <div class="events">
         <div class="event reveal">
@@ -252,7 +266,7 @@
     <div class="wrap">
       <span class="eyebrow">Unsere Partner</span>
       <h2 class="section-title reveal">They keep us rollin'</h2>
-      <p class="lead reveal" style="margin-top:1rem"> </p>
+      <p class="lead reveal" style="margin-top:1rem; color: red;"> Platzhalter habe hier keinen Überblick - bitte checken - ist das aktuell? wer fehlt?</p>
 
       <!-- Flip cards: front = logo, back = short description + website link.
            Logos live in assets/img/partner_logos/. For a logo that has a dark/built-in
@@ -350,31 +364,59 @@
         </a>
       </div>
 
+      <!-- Each card mimics an Instagram post: header (avatar + handle), image, action row, caption.
+           Replace the <img src> + caption text and point the links at the matching post. -->
       <div class="insta-grid reveal">
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
-        <a class="insta-tile" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
-          <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
-          <svg class="ig-ic" aria-hidden="true"><use href="#ig"/></svg>
-        </a>
+
+        <article class="ig-post">
+          <a class="ig-post__head" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
+            <span class="ig-post__avatar" aria-hidden="true"><svg viewBox="0 0 200 68"><use href="#occ-mark"/></svg></span>
+            <span class="ig-post__handle">og_cyclingcrew</span>
+          </a>
+          <a class="ig-post__media" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+            <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
+          </a>
+          <div class="ig-post__actions" aria-hidden="true">
+            <svg class="ig-act"><use href="#ig-heart"/></svg>
+            <svg class="ig-act"><use href="#ig-comment"/></svg>
+            <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
+          </div>
+          <p class="ig-post__caption"><b>og_cyclingcrew</b> Saisonstart in den Beinen, Vorfreude im Kopf — wir sind ready! 🚴‍♀️🔥</p>
+        </article>
+
+        <article class="ig-post">
+          <a class="ig-post__head" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
+            <span class="ig-post__avatar" aria-hidden="true"><svg viewBox="0 0 200 68"><use href="#occ-mark"/></svg></span>
+            <span class="ig-post__handle">og_cyclingcrew</span>
+          </a>
+          <a class="ig-post__media" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+            <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
+          </a>
+          <div class="ig-post__actions" aria-hidden="true">
+            <svg class="ig-act"><use href="#ig-heart"/></svg>
+            <svg class="ig-act"><use href="#ig-comment"/></svg>
+            <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
+          </div>
+          <p class="ig-post__caption"><b>og_cyclingcrew</b> Teamwork makes the dream work — danke an alle, die heute mitgerollt sind! 💚</p>
+        </article>
+
+        <!-- Rightmost card fades out — hints that there's more on the actual feed. -->
+        <article class="ig-post ig-post--fade">
+          <a class="ig-post__head" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener">
+            <span class="ig-post__avatar" aria-hidden="true"><svg viewBox="0 0 200 68"><use href="#occ-mark"/></svg></span>
+            <span class="ig-post__handle">og_cyclingcrew</span>
+          </a>
+          <a class="ig-post__media" href="https://www.instagram.com/og_cyclingcrew/" target="_blank" rel="noopener" aria-label="Instagram-Beitrag öffnen">
+            <img src="assets/img/placeholder.png" alt="OCC Instagram-Beitrag" loading="lazy" />
+          </a>
+          <div class="ig-post__actions" aria-hidden="true">
+            <svg class="ig-act"><use href="#ig-heart"/></svg>
+            <svg class="ig-act"><use href="#ig-comment"/></svg>
+            <svg class="ig-act ig-act--share"><use href="#ig-share"/></svg>
+          </div>
+          <p class="ig-post__caption"><b>og_cyclingcrew</b> Rennbericht ist online — es ging um jede Sekunde. 🏁 Link in Bio!</p>
+        </article>
+
       </div>
     </div>
   </section>
