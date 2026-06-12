@@ -13,10 +13,16 @@
 
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
 
-  <!-- Fonts -->
+  <!-- Preload the hero (LCP) so it starts downloading during HTML parse -->
+  <link rel="preload" as="image" href="assets/img/collage/collage.webp" fetchpriority="high" />
+
+  <!-- Fonts: loaded non-render-blocking (print->all swap) so first paint isn't held up -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
+  </noscript>
 
   <link rel="stylesheet" href="css/style.css?v=36" />
 </head>
@@ -82,7 +88,7 @@
   <section class="hero" id="top">
     <div class="hero__media">
       <!-- PLACEHOLDER: replace with a wide, high-res action shot of the crew riding -->
-      <img src="assets/img/collage/collage.webp" alt="OG Cycling Crew auf einer Ausfahrt in Südbaden" fetchpriority="high" decoding="async" width="2200" height="1238" />
+      <img src="assets/img/collage/collage.webp" alt="OG Cycling Crew auf einer Ausfahrt in Südbaden" fetchpriority="high" decoding="async" width="1920" height="1081" />
     </div>
     <div class="wrap hero__inner">
       <h1>OG <span class="accent">Cycling</span><br />Crew</h1>
