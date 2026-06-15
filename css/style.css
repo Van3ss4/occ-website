@@ -320,6 +320,33 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .section--dark .crew-group--buli { color: #8ea2e6; }
 .section--dark .crew-subsection { border-top-color: rgba(255,255,255,.14); }
 
+/* --- Light variant: dark photos on a white background, with a name label below --- */
+.section--white { background: var(--white); color: var(--ink); }
+
+/* Card wrapping the photo and its name caption */
+.rider-card {
+  display: flex; flex-direction: column;
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 30px -24px rgba(8,24,42,.4);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.rider-card__photo { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--paper); }
+.rider-card__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.rider-card:hover { transform: translateY(-6px); box-shadow: 0 26px 48px -26px rgba(8,24,42,.35); }
+.rider-card:hover .rider-card__photo img { transform: scale(1.05); }
+
+/* Name caption — display font, navy ink, with a small brand accent bar above */
+.rider-card figcaption { padding: 1rem 1.15rem 1.2rem; }
+.rider-card__name {
+  font-family: var(--font-display); font-weight: 600; color: var(--ink);
+  font-size: 1.05rem; line-height: 1.2; letter-spacing: -.01em;
+}
+.rider-card__name::before {
+  content: ""; display: block; width: 26px; height: 3px; border-radius: 2px;
+  background: var(--grad); margin-bottom: .65rem;
+}
+
 /* ============================================================
    MOMENTS — overlapping photo / video collage
    ============================================================ */
