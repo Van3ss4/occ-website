@@ -267,6 +267,7 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
   display: flex; align-items: center; gap: 1.1rem;
 }
 .crew-group::before { content: ""; flex: none; width: 34px; height: 4px; border-radius: 2px; background: var(--grad); }
+#riders-light .crew-group::before { display: none; }
 .crew-empty { color: var(--muted); font-style: italic; }
 
 /* secondary heading inside the crew section (e.g. "Off-Bike Team") — clear separation above */
@@ -309,7 +310,7 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 #bundesliga .eyebrow { color: var(--buli); }
 #bundesliga .eyebrow::before { background: var(--buli); }
 .crew-group--buli { color: var(--buli); }
-.crew-group--buli::before { background: var(--buli); }
+.crew-group--buli::before { background: var(--grad); }
 .crew-group--rg { color: var(--rg); }
 .crew-group--rg::before { background: var(--rg); }
 
@@ -650,6 +651,9 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
     transform: translateX(100%); transition: transform .4s var(--ease); box-shadow: -20px 0 60px -20px rgba(0,0,0,.5);
   }
   body.nav-open .nav { transform: translateX(0); }
+  /* backdrop-filter on the scrolled header makes it the containing block for the
+     fixed nav drawer, collapsing it to a tiny box. Drop it while the menu is open. */
+  body.nav-open .header, body.nav-open .header.scrolled { backdrop-filter: none; }
   .nav a, .header.scrolled .nav a { color: var(--paper); font-size: 1.2rem; }
   .nav__cta { margin-top: .5rem; }
   body.nav-open { overflow: hidden; }
