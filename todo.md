@@ -1,8 +1,5 @@
 - Impressum
 - Datenschutz
-- noch ein bisschen Inhalt dazuschreiben (aktuell nur h2 + p.lead → mehr p siehe Annis Sponsorenmappe)
-- lieber die schwarzen Portraits verwenden und dafür eine section mit weißem Hintergrund verwenden?
-- Bilder runterscalen und zu webp konvertieren damit sie schneller laden
 - richtiges OCC Logo einfügen
 - alt Texte aktualisieren
 - SEO
