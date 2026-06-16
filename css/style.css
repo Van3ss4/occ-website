@@ -266,7 +266,7 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
   margin: clamp(3rem, 6vw, 4.5rem) 0 1.6rem;
   display: flex; align-items: center; gap: 1.1rem;
 }
-.crew-group::before { content: ""; flex: none; width: 34px; height: 4px; border-radius: 2px; background: var(--grad); }
+.crew-group::before { display: none; }
 #riders-light .crew-group::before { display: none; }
 .crew-empty { color: var(--muted); font-style: italic; }
 
@@ -274,7 +274,6 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .crew-subsection {
   margin-top: clamp(3.5rem, 7vw, 6rem);
   padding-top: clamp(2.5rem, 5vw, 4rem);
-  border-top: 1px solid var(--line);
 }
 /* when a group title sits directly under a (sub)section title, collapse its big top margin */
 .section-title + .crew-group { margin-top: 1.4rem; }
@@ -308,11 +307,11 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 
 /* Bundesliga identity colour (periwinkle from the rider-name typography) — used for all Bundesliga accents */
 #bundesliga .eyebrow { color: var(--buli); }
-#bundesliga .eyebrow::before { background: var(--buli); }
+#bundesliga .eyebrow::before { background: linear-gradient(90deg, var(--buli), transparent); }
 .crew-group--buli { color: var(--buli); }
-.crew-group--buli::before { background: var(--grad); }
+.crew-group--buli::before { display: none; }
 .crew-group--rg { color: var(--rg); }
-.crew-group--rg::before { background: var(--rg); }
+.crew-group--rg::before { display: none; }
 
 /* On the dark riders section keep the headings legible (the default ink/teal/
    periwinkle tones are too dark on the navy background) */
