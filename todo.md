@@ -7,5 +7,5 @@
 - alt Texte aktualisieren
 - SEO
 - domain (haben wir)?
-- cloudflare dns Eintrag
-- seite crawlen lassen
+- Domain mappen mit Cloudflare
+- Seite crawlen lassen
