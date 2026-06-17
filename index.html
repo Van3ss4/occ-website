@@ -16,15 +16,12 @@
   <!-- Preload the hero (LCP) so it starts downloading during HTML parse -->
   <link rel="preload" as="image" href="assets/img/collage/collage.webp" fetchpriority="high" />
 
-  <!-- Fonts: loaded non-render-blocking (print->all swap) so first paint isn't held up -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
-  </noscript>
+  <!-- Fonts: self-hosted (no Google request → GDPR-safe). Defined via @font-face in style.css.
+       Preload the two weights needed for first paint so text renders without a flash. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-700.woff2" crossorigin />
 
-  <link rel="stylesheet" href="css/style.css?v=43" />
+  <link rel="stylesheet" href="css/style.css?v=44" />
 </head>
 <body>
 
