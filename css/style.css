@@ -290,6 +290,52 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .stat span { font-size: .9rem; color: var(--muted); margin-top: .5rem; display: block; }
 @media (max-width: 680px) { .stats { grid-template-columns: repeat(2,1fr); } }
 
+/* Key figures in the About section, styled as race bibs (Startnummern):
+   white fabric patch, four safety-pin holes, small header strip, big black number.
+   Bibs hang slightly crooked, like they've been pinned on in a hurry. */
+.figures {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: clamp(4rem, 8vw, 6.5rem);
+}
+.bib {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  aspect-ratio: 1.414 / 1; /* DIN A landscape (√2 : 1) */
+  padding: 1.2rem 1.4rem; background: var(--white); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(8,24,42,.04), 0 18px 30px -22px rgba(8,24,42,.35);
+  /* safety-pin holes in the four corners */
+  background-image:
+    radial-gradient(circle at 14px 14px, var(--ink) 4.5px, transparent 5.2px),
+    radial-gradient(circle at calc(100% - 14px) 14px, var(--ink) 4.5px, transparent 5.2px),
+    radial-gradient(circle at 14px calc(100% - 14px), var(--ink) 4.5px, transparent 5.2px),
+    radial-gradient(circle at calc(100% - 14px) calc(100% - 14px), var(--ink) 4.5px, transparent 5.2px);
+  transition: transform .4s var(--ease);
+}
+.bib__head {
+  font-family: var(--font-display); font-size: .62rem; font-weight: 700; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--teal);
+  border-bottom: 2px solid var(--lime); padding-bottom: .35rem; margin-bottom: .6rem;
+}
+.bib__num {
+  font-family: var(--font-display); font-weight: 700; line-height: 1;
+  font-size: clamp(4.2rem, 9vw, 7.2rem); letter-spacing: -.03em; font-variant-numeric: tabular-nums;
+}
+/* label printed under the number, like the rider's name on a bib */
+.bib__label {
+  margin-top: .7rem; text-align: center; max-width: 100%;
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem; line-height: 1.3;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+}
+.bib:nth-child(1) { transform: rotate(-2deg); }
+.bib:nth-child(2) { transform: rotate(1.2deg) translateY(10px); }
+.bib:nth-child(3) { transform: rotate(-.8deg); }
+.bib:hover { transform: rotate(0) translateY(-3px); }
+@media (max-width: 680px) {
+  .figures { grid-template-columns: 1fr; gap: 2.2rem; max-width: 320px; }
+  .bib:nth-child(2) { transform: rotate(1.2deg); }
+}
+
+
 /* ============================================================
    PILLARS / WHAT WE DO
    ============================================================ */
@@ -352,7 +398,29 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
    BUNDESLIGA / CLUB PARTNERSHIP
    ============================================================ */
 .club__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
-@media (max-width: 880px) { .club__grid { grid-template-columns: 1fr; } }
+/* Mirrored variant: photo on the left (text stays first in the DOM, so mobile still reads text → photo) */
+.club__grid--reverse { grid-template-columns: .95fr 1.05fr; }
+.club__grid--reverse .club-photo { order: -1; }
+@media (max-width: 880px) {
+  .club__grid { grid-template-columns: 1fr; }
+  .club__grid--reverse .club-photo { order: 0; }
+}
+
+/* Renngemeinschaft identity colour (teal-green) */
+#renngemeinschaft .eyebrow { color: var(--rg); }
+#renngemeinschaft .eyebrow::before { background: linear-gradient(90deg, var(--rg), transparent); }
+#renngemeinschaft + #bundesliga { padding-top: 0; }
+
+/* Mirrored layout: text right-aligned next to the left photo (desktop only; mobile stays left-aligned) */
+@media (min-width: 881px) {
+  .club__grid--reverse > div { text-align: right; }
+  .club__grid--reverse .eyebrow { flex-direction: row-reverse; }
+  #renngemeinschaft .eyebrow::before { background: linear-gradient(270deg, var(--rg), transparent); }
+}
+
+/* Small keyword pills under the club text */
+.club-tags { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 0; padding: 0; }
+.club-tags li { padding: .45rem .95rem; border: 1px solid var(--rg); border-radius: 999px; color: var(--rg); font-size: .85rem; font-weight: 600; }
 
 /* Feature photo at its natural ratio — matches the About section imagery */
 .club-photo { width: 100%; height: auto; display: block; border-radius: var(--radius); box-shadow: 0 26px 50px -28px rgba(8,24,42,.45); }
@@ -400,44 +468,38 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 }
 
 /* ============================================================
-   MOMENTS — overlapping photo / video collage
+   MOMENTS — auto-scrolling photo marquee
    ============================================================ */
-/* full-bleed so the larger tiles have room to overlap */
-.collage {
-  display: flex; justify-content: center; align-items: center;
-  width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
-  padding: 2.5rem 1rem; max-width: 100vw; overflow: hidden;
+/* Full-bleed band; each track holds its photos twice, so sliding it by -50% loops seamlessly.
+   Only transform is animated (GPU-composited, no layout/paint per frame). */
+.photo-strip {
+  --strip-h: clamp(190px, 26vw, 340px);
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-top: 3rem; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
-.collage__item {
-  position: relative; flex: none; aspect-ratio: 3/4;
-  border-radius: 0px; overflow: hidden; background: #0d2236;
-  /* border: 6px solid #0d2236; */
-  box-shadow: 0 26px 60px -20px rgba(0,0,0,.7);
-  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+/* each row clips its own track, so the JS image feeder can tell what's actually in view */
+.photo-strip__row { overflow: hidden; }
+.photo-strip__track {
+  display: flex; width: max-content;
+  animation: photo-strip 240s linear infinite;
+  will-change: transform;
 }
-.collage__item + .collage__item { margin-left: clamp(-1.5rem, -1.5vw, -.75rem); }
-.collage__item img, .collage__item video { width: 100%; height: 100%; object-fit: cover; display: block; }
-/* mixed sizes + alternating high/low offsets (no tilt); stack order grows left→right */
-.collage__item--1 { width: min(30vw, 480px); aspect-ratio: 3/2; transform: translateY(60px);  z-index: 1; }
-.collage__item--2 { width: min(26vw, 430px); transform: translateY(20px);  z-index: 3; }
-.collage__item--3 { width: min(19vw, 320px); transform: translateY(66px);  z-index: 2; }
-.collage__item--4 { width: min(18vw, 300px); transform: translateY(-28px); z-index: 3; }
-/* On hover keep each tile's own offset and just lift it a touch (no big jump) */
-.collage__item:hover { z-index: 10; box-shadow: 0 34px 64px -18px rgba(0,0,0,.7); }
-.collage__item--1:hover { transform: translateY(54px)  scale(1.02); }
-.collage__item--2:hover { transform: translateY(14px)  scale(1.02); }
-.collage__item--3:hover { transform: translateY(60px)  scale(1.02); }
-.collage__item--4:hover { transform: translateY(-34px) scale(1.02); }
-/* small "video" badge */
-.collage__badge {
-  position: absolute; top: 10px; right: 10px; z-index: 4; width: 30px; height: 30px; border-radius: 50%;
-  display: grid; place-items: center; background: rgba(8,24,42,.55); backdrop-filter: blur(4px); color: #fff;
+.photo-strip__row--reverse .photo-strip__track { animation-direction: reverse; animation-duration: 270s; }
+/* margin instead of gap so both halves are exactly equal → no jump at the loop point */
+.photo-strip__track img {
+  height: var(--strip-h); width: auto; flex: none; margin-right: 1rem;
+  object-fit: cover; background: #0d2236; display: block;
 }
-.collage__badge svg { width: 14px; height: 14px; }
-@media (max-width: 760px) {
-  .collage { flex-wrap: wrap; gap: 1rem; padding: 1rem var(--pad); }
-  .collage__item { width: calc(50% - .5rem); aspect-ratio: 3/4; margin-left: 0 !important; transform: none !important; box-shadow: 0 16px 36px -18px rgba(0,0,0,.6); }
-  .collage__item:hover { transform: translateY(-6px) !important; }
+.photo-strip:hover .photo-strip__track,
+.photo-strip.is-paused .photo-strip__track { animation-play-state: paused; }
+@keyframes photo-strip { to { transform: translateX(-50%); } }
+
+/* Reduced motion: no auto-scroll, rows become swipeable instead */
+@media (prefers-reduced-motion: reduce) {
+  .photo-strip__track { animation: none; }
+  .photo-strip__row { overflow-x: auto; }
+  .photo-strip__track img[aria-hidden="true"] { display: none; }
 }
 
 /* ============================================================
@@ -690,6 +752,44 @@ body.nav-open .burger span:nth-child(3) { bottom: 50%; transform: translateY(50%
 .reveal[data-delay="1"] { transition-delay: .08s; }
 .reveal[data-delay="2"] { transition-delay: .16s; }
 .reveal[data-delay="3"] { transition-delay: .24s; }
+
+/* ============================================================
+   Legal pages (Impressum / Datenschutz)
+   ============================================================ */
+.legal {
+  /* clear the fixed header, then normal reading width */
+  padding-block: clamp(7rem, 12vw, 10rem) clamp(3rem, 8vw, 6rem);
+}
+.legal .wrap { max-width: 780px; }
+.legal__title { font-size: clamp(2rem, 5.5vw, 3.4rem); margin-bottom: .4rem; }
+.legal__updated { color: var(--muted); font-size: .9rem; margin-bottom: 2.5rem; }
+.legal h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem); margin-top: 2.6rem; margin-bottom: .8rem;
+}
+.legal h3 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.05rem; margin-top: 1.6rem; margin-bottom: .5rem;
+}
+.legal p, .legal li { color: #34424f; font-size: 1rem; }
+.legal p { margin-bottom: 1rem; }
+.legal ul { list-style: disc; padding-left: 1.3rem; margin-bottom: 1rem; }
+.legal li { margin-bottom: .4rem; }
+.legal a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.legal a:hover { color: var(--teal); }
+/* placeholder text the site owner still has to fill in */
+.legal .todo {
+  background: #fff8d6; color: #6b5b00; border: 1px dashed #c9bd4a;
+  border-radius: 6px; padding: .1em .4em; font-size: .95em;
+}
+.legal__back {
+  display: inline-flex; align-items: center; gap: .5rem; margin-top: 3rem;
+  font-family: var(--font-display); font-weight: 600; font-size: .95rem; color: var(--ink);
+}
+.legal__back:hover { color: var(--teal); }
+/* simplified header for subpages: dark text on paper background */
+.header--sub .brand, .header--sub .nav a, .header--sub .burger { color: var(--ink); }
+/* when the mobile drawer is open it sits on the dark panel → light burger */
+body.nav-open .header--sub .burger { color: var(--paper); }
 
 /* ============================================================
    Mobile nav
